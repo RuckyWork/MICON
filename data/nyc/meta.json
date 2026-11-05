@@ -1,0 +1,13 @@
+{
+  "name": "nyc",
+  "freq_minutes": 30,
+  "features": [
+    "taxi_outflow",
+    "taxi_inflow"
+  ],
+  "n_slots": 16848,
+  "n_regions": 862,
+  "start_time": "2014-01-15 00:00:00",
+  "train_end": 12484,
+  "val_end": 13872
+}

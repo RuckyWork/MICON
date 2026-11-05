@@ -1,0 +1,16 @@
+{
+  "data_dir": "data/chicago",
+  "window_size": 12,
+  "num_neighbors": 8,
+  "fill_by_distance": false,
+  "hidden_dim": 32,
+  "gru_hidden": 64,
+  "embed_dim": 64,
+  "latent_dim": 64,
+  "lambda_dp": 1.0,
+  "lambda_var": 2.0,
+  "lambda_cov": 1.0,
+  "lr": 0.001,
+  "batch_size": 50,
+  "epochs": 30
+}

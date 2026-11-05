@@ -1,0 +1,155 @@
+{
+  "name": "nyc_sim",
+  "freq_minutes": 30,
+  "features": [
+    "taxi_outflow",
+    "taxi_inflow"
+  ],
+  "n_slots": 6720,
+  "n_regions": 862,
+  "start_time": "2014-02-03 00:00:00",
+  "train_end": 6048,
+  "val_end": 6384,
+  "events": [
+    {
+      "start": 6388,
+      "end": 6391,
+      "regions": [
+        234
+      ]
+    },
+    {
+      "start": 6395,
+      "end": 6398,
+      "regions": [
+        200
+      ]
+    },
+    {
+      "start": 6400,
+      "end": 6403,
+      "regions": [
+        420
+      ]
+    },
+    {
+      "start": 6407,
+      "end": 6410,
+      "regions": [
+        274
+      ]
+    },
+    {
+      "start": 6407,
+      "end": 6410,
+      "regions": [
+        461
+      ]
+    },
+    {
+      "start": 6446,
+      "end": 6449,
+      "regions": [
+        387
+      ]
+    },
+    {
+      "start": 6454,
+      "end": 6457,
+      "regions": [
+        483
+      ]
+    },
+    {
+      "start": 6477,
+      "end": 6480,
+      "regions": [
+        147
+      ]
+    },
+    {
+      "start": 6491,
+      "end": 6494,
+      "regions": [
+        439
+      ]
+    },
+    {
+      "start": 6498,
+      "end": 6501,
+      "regions": [
+        202
+      ]
+    },
+    {
+      "start": 6541,
+      "end": 6544,
+      "regions": [
+        391
+      ]
+    },
+    {
+      "start": 6554,
+      "end": 6557,
+      "regions": [
+        232
+      ]
+    },
+    {
+      "start": 6587,
+      "end": 6590,
+      "regions": [
+        268
+      ]
+    },
+    {
+      "start": 6618,
+      "end": 6621,
+      "regions": [
+        337
+      ]
+    },
+    {
+      "start": 6633,
+      "end": 6636,
+      "regions": [
+        541
+      ]
+    },
+    {
+      "start": 6673,
+      "end": 6676,
+      "regions": [
+        285
+      ]
+    },
+    {
+      "start": 6680,
+      "end": 6683,
+      "regions": [
+        129
+      ]
+    },
+    {
+      "start": 6696,
+      "end": 6699,
+      "regions": [
+        254
+      ]
+    },
+    {
+      "start": 6699,
+      "end": 6702,
+      "regions": [
+        195
+      ]
+    },
+    {
+      "start": 6713,
+      "end": 6716,
+      "regions": [
+        116
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "data_dir": "data/nyc",
+  "window_size": 12,
+  "num_neighbors": 12,
+  "fill_by_distance": false,
+  "hidden_dim": 32,
+  "gru_hidden": 64,
+  "embed_dim": 128,
+  "latent_dim": 128,
+  "lambda_dp": 1.0,
+  "lambda_var": 5.0,
+  "lambda_cov": 1.0,
+  "lr": 0.001,
+  "batch_size": 50,
+  "epochs": 30
+}

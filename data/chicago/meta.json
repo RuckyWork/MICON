@@ -1,0 +1,13 @@
+{
+  "name": "chicago",
+  "freq_minutes": 30,
+  "features": [
+    "taxi_outflow",
+    "taxi_inflow"
+  ],
+  "n_slots": 11664,
+  "n_regions": 77,
+  "start_time": "2019-01-01 00:00:00",
+  "train_end": 8688,
+  "val_end": 10176
+}
