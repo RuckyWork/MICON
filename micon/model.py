@@ -8,20 +8,33 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 
-def build_neighbors(adjacency, distance, k, fill_by_distance=False):
-    """Select up to k geographic neighbors per region for the context view.
+def build_neighbors(adjacency, distance, k=None, fill_by_distance=False):
+    """Select the geographic neighbors of each region for the context view.
 
-    Adjacent regions are taken first, ordered by distance. If a region has fewer than k
+    k=None (the setting of the paper): all adjacent regions, in index order; distance is not used.
+    Integer k: up to k adjacent regions, ordered by distance. If a region has fewer than k
     and fill_by_distance is set, the nearest non-adjacent regions fill the remaining slots.
     Unused slots point to the region itself and are masked out.
 
-    Returns neighbor indices (N, k) int64 and a validity mask (N, k) bool.
+    Returns neighbor indices (N, K) int64 and a validity mask (N, K) bool, where K is k,
+    or the largest number of adjacent regions when k is None.
     """
     adjacency = np.asarray(adjacency)
-    distance = np.asarray(distance, dtype=np.float64)
     n = adjacency.shape[0]
-    if adjacency.shape != (n, n) or distance.shape != (n, n):
-        raise ValueError(f"adjacency and distance must be ({n}, {n})")
+    if adjacency.shape != (n, n):
+        raise ValueError(f"adjacency must be ({n}, {n})")
+    if k is None:
+        adjacent = [np.flatnonzero((adjacency[i] > 0) & (np.arange(n) != i)) for i in range(n)]
+        k = max(1, max(len(a) for a in adjacent))
+        indices = np.tile(np.arange(n)[:, None], (1, k))
+        mask = np.zeros((n, k), dtype=bool)
+        for i, a in enumerate(adjacent):
+            indices[i, : len(a)] = a
+            mask[i, : len(a)] = True
+        return indices.astype(np.int64), mask
+    distance = np.asarray(distance, dtype=np.float64)
+    if distance.shape != (n, n):
+        raise ValueError(f"distance must be ({n}, {n})")
     indices = np.tile(np.arange(n)[:, None], (1, k))
     mask = np.zeros((n, k), dtype=bool)
     for i in range(n):

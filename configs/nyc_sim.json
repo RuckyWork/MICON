@@ -1,7 +1,7 @@
 {
   "data_dir": "data/nyc_sim",
   "window_size": 12,
-  "num_neighbors": 12,
+  "num_neighbors": null,
   "fill_by_distance": false,
   "hidden_dim": 32,
   "gru_hidden": 64,

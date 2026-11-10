@@ -1,4 +1,4 @@
-"""Score the test split with trained checkpoints and report AUC, R@p and (if events are given) Hit@p.
+"""Score the test split with trained checkpoints and report AUC, R@p, Within_AUC and (if events are given) Hit@p.
 
 With several checkpoints (e.g. one per seed) the mean and standard deviation are printed as well.
 

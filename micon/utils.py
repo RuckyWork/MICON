@@ -32,7 +32,7 @@ def compute_scores(model, dataset, split="test", batch_size=64):
 
 def build_model(config, dataset):
     neighbor_indices, neighbor_mask = build_neighbors(
-        dataset.adjacency, dataset.distance, config["num_neighbors"], config["fill_by_distance"]
+        dataset.adjacency, dataset.distance, config.get("num_neighbors"), config.get("fill_by_distance", False)
     )
     return MICON(
         neighbor_indices,

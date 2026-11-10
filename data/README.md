@@ -6,9 +6,9 @@ Each dataset is a directory with two files.
 
 | Key | Shape | Content |
 |---|---|---|
-| `flow` | (T, N, F) | Raw (unnormalized) traffic per slot and region; here F = 2, taxi outflow and inflow |
+| `flow` | (T, N, F) | Raw (unnormalized) traffic per slot and region; F = 2 (taxi outflow and inflow) for NYC and NYC-Simulated, F = 4 (taxi and bike-share outflow and inflow) for Chicago |
 | `adjacency` | (N, N) | 0/1 region adjacency; the diagonal is ignored |
-| `distance` | (N, N) | Distance between regions; only used to order neighbors |
+| `distance` | (N, N) | Distance between regions; only used when `num_neighbors` is an integer, to order the adjacent regions and, with `fill_by_distance`, to add the nearest non-adjacent ones |
 | `labels` | (T, N) | 1 for an anomalous (slot, region) cell; only the test slots are used, for evaluation only |
 
 `meta.json`:
