@@ -107,17 +107,3 @@ The hyperparameters are in `configs/*.json`:
 | `embed_dim` / `latent_dim` | view representation D / latent dimension C | 128 / 128 | 64 / 64 |
 | `lambda_dp`, `lambda_var`, `lambda_cov` | loss weights | 1, 5, 1 | 1, 2, 1 |
 | `lr`, `batch_size`, `epochs` | Adam learning rate, slots per batch, epochs | 1e-3, 50, 30 | 1e-3, 50, 30 |
-
-## Citation
-
-```bibtex
-@article{micon,
-  title  = {MICON: A Mutual Information--Driven Contrastive Framework for Urban Anomaly Detection},
-  author = {TODO},
-  year   = {2026}
-}
-```
-
-## License
-
-[MIT](LICENSE)
